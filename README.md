@@ -9,9 +9,9 @@ You can then use File->Open or drag/drop linux executables or shared objects int
 
 
 The info screen
-[](/images/info.png)
+![info](/images/info.png)
 
 Dependency graph of an application with a missing shared object
-[](/images/angelcad.png)
+![angelcad](/images/angelcad.png)
 
 
