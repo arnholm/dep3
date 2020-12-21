@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="dep3" />
+		<Option pch_mode="2" />
+		<Option compiler="msvc" />
+		<Build>
+			<Target title="GCC_Debug">
+				<Option output=".cmp/gcc/dep3d" prefix_auto="0" extension_auto="1" />
+				<Option object_output=".cmp/gcc/obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc_generic" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-W" />
+					<Add option="-fPIC" />
+					<Add option="-fexceptions" />
+					<Add option="-g" />
+					<Add option="`$(#wx.config) --cxxflags --debug`" />
+					<Add option="-DNOPCH" />
+					<Add option="-D_DEBUG" />
+					<Add directory="./" />
+				</Compiler>
+				<Linker>
+					<Add option="`$(#wx.config) --libs std,aui --static --debug`" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="[[ GetProjectManager().SaveAllProjects(); ]]" />
+				</ExtraCommands>
+			</Target>
+			<Target title="GCC_Release">
+				<Option output=".cmp/gcc/dep3" prefix_auto="0" extension_auto="1" />
+				<Option object_output=".cmp/gcc/obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc_generic" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-W" />
+					<Add option="-fPIC" />
+					<Add option="-fexceptions" />
+					<Add option="-Os" />
+					<Add option="`$(#wx.config) --cxxflags`" />
+					<Add option="-DNOPCH" />
+					<Add directory="./" />
+				</Compiler>
+				<Linker>
+					<Add option="`$(#wx.config) --libs std,aui --static`" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="rm -f $(TARGET_OUTPUT_FILE)" />
+					<Add before="[[ GetProjectManager().SaveAllProjects(); ]]" />
+					<Add after="$(CPDE_USR)/bin/cpde_usr -bin -xi -project=$(PROJECT_NAME)  -root=$(PROJECT_DIR)  -build=$(TARGET_NAME)  -target=$(TARGET_OUTPUT_FILE)  -usr=$(CPDE_USR)" />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-W" />
+			<Add option="-fPIC" />
+			<Add option="-fexceptions" />
+			<Add option="-Os" />
+			<Add option="`$(#wx.config) --cxxflags`" />
+			<Add option="-DNOPCH" />
+			<Add directory="./" />
+		</Compiler>
+		<Linker>
+			<Add option="`$(#wx.config) --libs std,aui --static`" />
+		</Linker>
+		<ExtraCommands>
+			<Add before="rm -f $(TARGET_OUTPUT_FILE)" />
+			<Add before="[[ GetProjectManager().SaveAllProjects(); ]]" />
+			<Add after="$(CPDE_USR)/bin/cpde_usr -bin -xi -project=$(PROJECT_NAME)  -root=$(PROJECT_DIR)  -build=$(TARGET_NAME)  -target=$(TARGET_OUTPUT_FILE)  -usr=$(CPDE_USR)" />
+			<Mode after="always" />
+		</ExtraCommands>
+		<Unit filename="dep3App.cpp" />
+		<Unit filename="dep3App.h" />
+		<Unit filename="dep3DropTarget.cpp" />
+		<Unit filename="dep3DropTarget.h" />
+		<Unit filename="dep3Main.cpp" />
+		<Unit filename="dep3Main.h" />
+		<Unit filename="dep3Panel.cpp" />
+		<Unit filename="dep3Panel.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="wxsmith/dep3Panel.wxs" />
+		<Unit filename="wxsmith/dep3frame.wxs" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="dep3App.cpp" main="dep3Frame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/dep3frame.wxs" src="dep3Main.cpp" hdr="dep3Main.h" fwddecl="0" i18n="1" name="dep3Frame" language="CPP" />
+					<wxPanel wxs="wxsmith/dep3Panel.wxs" src="dep3Panel.cpp" hdr="dep3Panel.h" fwddecl="0" i18n="1" name="dep3Panel" language="CPP" />
+				</resources>
+			</wxsmith>
+			<debugger>
+				<remote_debugging>
+					<options conn_type="0" serial_baud="" />
+				</remote_debugging>
+			</debugger>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

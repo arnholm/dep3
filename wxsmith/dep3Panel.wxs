@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxPanel" name="dep3Panel">
+		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<object class="wxTreeCtrl" name="ID_TREECTRL1" variable="m_tree" member="yes">
+					<image_list>m__images</image_list>
+					<tree_items>
+						<item>m_tree</item>
+						<item>m_images</item>
+					</tree_items>
+					<items_text>
+						<item2>m_tree</item2>
+						<item2>m_images</item2>
+					</items_text>
+				</object>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+		<object class="wxImageList" variable="m_images" member="yes">
+			<image_list>
+				<item>16</item>
+				<item>16</item>
+			</image_list>
+			<image_text>
+				<item2>16</item2>
+				<item2>16</item2>
+			</image_text>
+			<use_include>1</use_include>
+		</object>
+	</object>
+</wxsmith>

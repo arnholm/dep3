@@ -1,0 +1,29 @@
+/* XPM */
+static const char *orange_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 6 1",
+"+ c #FFB580",
+"  c None",
+"X c #FF6A00",
+". c #FFB47F",
+"O c #FFB988",
+"o c #FFB077",
+/* pixels */
+"                ",
+"    .XXXXXXo    ",
+"   XXXXXXXXXX   ",
+"  XXXXXXXXXXXX  ",
+" .XXXXXXXXXXXXo ",
+" XXXXXXXXXXXXXX ",
+" XXXXXXXXXXXXXX ",
+" XXXXXXXXXXXXXX ",
+" XXXXXXXXXXXXXX ",
+" XXXXXXXXXXXXXX ",
+" XXXXXXXXXXXXXX ",
+" OXXXXXXXXXXXX+ ",
+"  XXXXXXXXXXXX  ",
+"   XXXXXXXXXX   ",
+"    OXXXXXX+    ",
+"                "
+};
+
