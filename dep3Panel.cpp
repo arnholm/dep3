@@ -83,8 +83,9 @@ void dep3Panel::Open(const wxFileName& fname)
    for(size_t i=0; i<ndep; i++) {
 
       // determine level in tree and green/red status
-      size_t ilev = output[i].find_first_not_of(' ')/4;
-      int index   = (output[i].find("not found")==std::string::npos)? 0 : 1;
+      size_t indent = output[i].find_first_not_of(' ');
+      size_t ilev   = indent/4;
+      int index     = (output[i].find("not found")==std::string::npos)? 0 : 1;
 
       if(ilev==0) {
          // create the root
@@ -93,7 +94,7 @@ void dep3Panel::Open(const wxFileName& fname)
       else {
 
          // add child item using red or green item colour
-         ids[ilev] = m_tree->AppendItem(ids[ilev-1],output[i],index);
+         ids[ilev] = m_tree->AppendItem(ids[ilev-1],output[i].substr(indent),index);
 
          if(index==1) {
             for(size_t j=0; j<ilev; j++) {
